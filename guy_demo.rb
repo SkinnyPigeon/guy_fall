@@ -148,7 +148,7 @@ nil
 
 
 
-
+#first push is working well but the animation is not breaking out. I need some kind of break and to continue the animation. I think second push will then work. Maybe change the animation completely so there's a random call for how many frames it goes through before the ledge function is called.
 
 
 
