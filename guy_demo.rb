@@ -59,21 +59,22 @@ end
 
 
 def ledge
-  a = rand(0..3)
-  b = @guys[a]
-  b.delete_at(0)
-  b.concat([['-']])
+  choose_guy = rand(0..3)
+  @replace = @guys[choose_guy]
+  @replace.delete_at(0)
+  @replace.concat([['-']])
 end
 
-def return_guy(guys)
-  result = guys.each { |guy| guy[4] } 
-  binding.pry
-  return result
-end
-
+def return_guy
 binding.pry
+nil
+end
+
+# binding.pry
 guy_fall(@guy1, @guy2, @guy3, @guy4)
 ledge
+return_guy()
+nil
 # guy_fall(@guy1, @guy2, @guy3, @guy4)
 # return_guy(@guys)
 
