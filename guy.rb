@@ -56,8 +56,22 @@ def guy_fall(guy1, guy2, guy3, guy4)
     animate
   end
 end
-binding.pry
+
+
+def ledge
+  a = rand(0..3)
+  b = @guys[a]
+  b.delete_at(0)
+  b.concat(['-'])
+end
+
+
+
+# binding.pry
 guy_fall(@guy1, @guy2, @guy3, @guy4)
+# ledge
+guy_fall(@guy1, @guy2, @guy3, @guy4)
+
 
 
 
