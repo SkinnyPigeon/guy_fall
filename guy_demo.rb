@@ -102,17 +102,48 @@ def first_push
   end
 end
 
+def second_push
+  case 
+
+    when @replace == @guy1
+      @guy2[3].shift
+      @guy2[3].unshift('|')
+      @guy3[3].shift
+      @guy3[3].unshift('-')
+      return
+
+    when @replace == @guy2
+      @guy3[3].shift
+      @guy3[3].unshift('|')
+      @guy4[3].shift
+      @guy4[3].unshift('-')
+      return
+
+    when @replace == @guy3
+      @guy4[3].shift
+      @guy4[3].unshift('|')
+      @guy1[3].shift
+      @guy1[3].unshift('-')
+      return
+
+    when @replace == @guy4
+      @guy1[3].shift
+      @guy1[3].unshift('|')
+      @guy2[3].shift
+      @guy2[3].unshift('-')
+      return
+
+  end
+end
 
 
-# binding.pry
 guy_fall(@guy1, @guy2, @guy3, @guy4)
 ledge
 first_push
+# second_push
 guy_fall(@guy1, @guy2, @guy3, @guy4)
 binding.pry
 nil
-# guy_fall(@guy1, @guy2, @guy3, @guy4)
-# return_guy(@guys)
 
 
 
